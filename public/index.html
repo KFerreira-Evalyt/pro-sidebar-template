@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,32 +16,33 @@
     <div class="layout has-sidebar fixed-sidebar fixed-header">
       <aside id="sidebar" class="sidebar break-point-lg has-bg-image">
         <a id="btn-collapse" class="sidebar-collapser"><i class="ri-arrow-left-s-line"></i></a>
+        
         <div class="image-wrapper">
           <img src="assets/images/sidebar-bg.jpg" alt="sidebar background" />
         </div>
         <div class="sidebar-layout">
           <div class="sidebar-header">
             <div class="pro-sidebar-logo">
-              <div>P</div>
-              <h5>Pro Sidebar</h5>
+              <img src="assets/images/Evalyt_DarkMode.png" alt="Evalyt Logo" style="max-height: 30px;"/> <!-- Adjust max-height as needed -->
             </div>
           </div>
           <div class="sidebar-content">
             <nav class="menu open-current-submenu">
               <ul>
-                <li class="menu-header"><span> GENERAL </span></li>
-                <li class="menu-item sub-menu">
-                  <a href="#">
+                <li class="menu-header"><span> TOOLS </span></li>
+                <li class="menu-item">
+                  <a href="dashboard.html">
                     <span class="menu-icon">
                       <i class="ri-vip-diamond-fill"></i>
                     </span>
-                    <span class="menu-title">Components</span>
+                    <span class="menu-title">Dashboard</span>
                     <span class="menu-suffix">
-                      <span class="badge primary">Hot</span>
+                      
                     </span>
                   </a>
                   <div class="sub-menu-list">
                     <ul>
+                      <!--
                       <li class="menu-item">
                         <a href="#">
                           <span class="menu-title">Grid</span>
@@ -55,6 +57,7 @@
                         <a href="#">
                           <span class="menu-title">Forms</span>
                         </a>
+                      
                         <div class="sub-menu-list">
                           <ul>
                             <li class="menu-item">
@@ -104,6 +107,7 @@
                             </li>
                           </ul>
                         </div>
+                      -->
                       </li>
                     </ul>
                   </div>
@@ -113,23 +117,28 @@
                     <span class="menu-icon">
                       <i class="ri-bar-chart-2-fill"></i>
                     </span>
-                    <span class="menu-title">Charts</span>
+                    <span class="menu-title">Data Management</span>
                   </a>
                   <div class="sub-menu-list">
                     <ul>
                       <li class="menu-item">
                         <a href="#">
-                          <span class="menu-title">Pie chart</span>
+                          <span class="menu-title">Azure Login</span>
                         </a>
                       </li>
                       <li class="menu-item">
                         <a href="#">
-                          <span class="menu-title">Line chart</span>
+                          <span class="menu-title">Reports</span>
                         </a>
                       </li>
                       <li class="menu-item">
                         <a href="#">
-                          <span class="menu-title">Bar chart</span>
+                          <span class="menu-title">Resource Groups</span>
+                        </a>
+                      </li>
+                      <li class="menu-item">
+                        <a href="#">
+                          <span class="menu-title">Synapse</span>
                         </a>
                       </li>
                     </ul>
@@ -140,33 +149,35 @@
                     <span class="menu-icon">
                       <i class="ri-shopping-cart-fill"></i>
                     </span>
-                    <span class="menu-title">E-commerce</span>
+                    <span class="menu-title">Help Documentation</span>
                   </a>
                   <div class="sub-menu-list">
                     <ul>
                       <li class="menu-item">
                         <a href="#">
-                          <span class="menu-title">Products</span>
+                          <span class="menu-title">Azure Loging Help</span>
                         </a>
                       </li>
                       <li class="menu-item">
                         <a href="#">
-                          <span class="menu-title">Orders</span>
+                          <span class="menu-title">Resource Groups Help</span>
                         </a>
                       </li>
                       <li class="menu-item">
                         <a href="#">
-                          <span class="menu-title">credit card</span>
+                          <span class="menu-title">Azure Synapse Help</span>
                         </a>
                       </li>
                     </ul>
                   </div>
+                  <!--
                 </li>
                 <li class="menu-item sub-menu">
                   <a href="#">
                     <span class="menu-icon">
                       <i class="ri-global-fill"></i>
                     </span>
+                    
                     <span class="menu-title">Maps</span>
                   </a>
                   <div class="sub-menu-list">
@@ -179,10 +190,11 @@
                       <li class="menu-item">
                         <a href="#">
                           <span class="menu-title">Open street map</span>
-                        </a>
+                        </a> 
                       </li>
                     </ul>
                   </div>
+                -->
                 </li>
                 <li class="menu-item sub-menu">
                   <a href="#">
@@ -205,6 +217,7 @@
                       </li>
                     </ul>
                   </div>
+                  <!--
                 </li>
                 <li class="menu-header" style="padding-top: 20px"><span> EXTRA </span></li>
                 <li class="menu-item">
@@ -214,7 +227,7 @@
                     </span>
                     <span class="menu-title">Documentation</span>
                     <span class="menu-suffix">
-                      <span class="badge secondary">Beta</span>
+                      
                     </span>
                   </a>
                 </li>
@@ -233,6 +246,7 @@
                     </span>
                     <span class="menu-title">Examples</span>
                   </a>
+                -->
                 </li>
               </ul>
             </nav>
@@ -344,6 +358,26 @@
         <div class="overlay"></div>
       </div>
     </div>
+    <script>
+      // Function to check the sidebar state and toggle the logo accordingly
+      function checkSidebarState() {
+        const sidebar = document.getElementById('sidebar');
+        const logoImage = document.querySelector('.pro-sidebar-logo img');
+    
+        if (sidebar.classList.contains('collapsed')) {
+          logoImage.src = 'assets/images/Evalyt_IconDarkMode.png'; // Set the path to your collapsed logo image
+        } else {
+          logoImage.src = 'assets/images/Evalyt_DarkMode.png'; // Set the path to your default logo image
+        }
+      }
+    
+      // Wait for the transition to end before checking the state
+      document.getElementById('sidebar').addEventListener('transitionend', checkSidebarState);
+    </script>
+    
+    
   </body>
+  
+</script>
   <script src="./main.js"></script>
 </html>
